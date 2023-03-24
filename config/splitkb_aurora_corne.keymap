@@ -14,6 +14,11 @@
     chain-length = <27>;
 };
 
+// move nice!view CS pin to D0
+&nice_view_spi {
+	cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+};
+
 // more similar to IGNORE_MOD_TAP_INTERRUPT mod-taps
 &mt {
     flavor = "balanced";
