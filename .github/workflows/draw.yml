@@ -1,0 +1,31 @@
+# Draw and commit an automated keymap diagram using https://github.com/caksoylar/keymap-drawer
+name: Draw keymap
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config/*.keymap'
+      - '.github/workflows/draw.yml'
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3      
+    - name: Draw with keymap-drawer
+      run: | 
+        python3 -m pip install keymap-drawer
+        mkdir -p svg
+        for keymap_file in config/*.keymap; do
+            keyboard=$(basename -s .keymap $keymap_file)
+            keymap -c svg/config.yaml parse -z $keymap_file | keymap draw - >svg/$keyboard.svg
+        done
+    - name: Commit updated images
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "[Skip CI] Automated keymap render"
+        file_pattern: "svg/*.svg"
