@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define L_MAIN 0
 #define L_CURSOR 1
@@ -111,10 +112,10 @@
         keyboard_layer {
             label = "Keyboard";
             bindings = <
-&none &none           &rgb_ug RGB_SAI &none  &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-&none &rgb_ug RGB_TOG &none           &none  &none           &none             &to L_MAIN   &to L_CURSOR &to L_CODE   &to L_NUM    &none        &none
-&none &none           &rgb_ug RGB_SAD &none  &rgb_ug RGB_HUD &rgb_ug RGB_BRD   &none        &none        &none        &none        &none        &none
-                                      &trans &trans          &to L_MAIN        &to L_CODE   &trans       &trans
+&none &none           &rgb_ug RGB_SAI &none  &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+&none &rgb_ug RGB_TOG &none           &none  &none           &none             &to L_MAIN       &to L_CURSOR      &to L_CODE   &to L_NUM    &none        &none
+&none &none           &rgb_ug RGB_SAD &none  &rgb_ug RGB_HUD &rgb_ug RGB_BRD   &ext_power EP_ON &ext_power EP_OFF &none        &none        &none        &none
+                                      &trans &trans          &to L_MAIN        &to L_CODE       &trans            &trans
             >;
         };
     };
