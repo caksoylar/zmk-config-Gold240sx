@@ -479,7 +479,11 @@ path {
 <text x="338.0" y="1484.0000000000002" class="tap">
 <tspan x="338.0" dy="-0.6em">RGB</tspan><tspan x="338.0" dy="1.2em">BRD</tspan></text>
 <rect rx="6.0" ry="6.0" x="536.0" y="1458.0000000000002" width="52.0" height="52.0" class=""/>
+<text x="562.0" y="1484.0000000000002" class="tap">
+<tspan x="562.0" dy="-0.6em">EP</tspan><tspan x="562.0" dy="1.2em">ON</tspan></text>
 <rect rx="6.0" ry="6.0" x="592.0" y="1452.4" width="52.0" height="52.0" class=""/>
+<text x="618.0" y="1478.4" class="tap">
+<tspan x="618.0" dy="-0.6em">EP</tspan><tspan x="618.0" dy="1.2em">OFF</tspan></text>
 <rect rx="6.0" ry="6.0" x="648.0" y="1446.8000000000002" width="52.0" height="52.0" class=""/>
 <rect rx="6.0" ry="6.0" x="704.0" y="1452.4" width="52.0" height="52.0" class=""/>
 <rect rx="6.0" ry="6.0" x="760.0" y="1463.6000000000001" width="52.0" height="52.0" class=""/>
