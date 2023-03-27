@@ -72,10 +72,10 @@
         default_layer {
             label = "Main";
             bindings = <
-&ht CAPS TAB &kp Q      &kp W &kp F           &kp P        &kp G       &kp J      &kp L          &kp U  &kp Y  &ht SEMI COLON  &ht EXCL QMARK
-&kp BSPC     &kp A      &kp R &kp S           &kp T        &kp D       &kp H      &kp N          &kp E  &kp I  &kp O           &kp DEL
-&kp LALT     &mt LCTL Z &kp X &kp C           &kp V        &kp B       &kp K      &kp M          &td_lb &td_rb &ht MINUS GRAVE &ht DQT SQT
-                              &mt RSHFT SPACE &mt RGUI RET &mo L_NUM   &mo L_CODE &mt RCTL COMMA &mt RALT DOT
+&ht CAPS TAB &kp Q      &kp W &kp F     &kp P           &kp G          &kp J          &kp L          &kp U  &kp Y  &ht SEMI COLON  &ht EXCL QMARK
+&kp BSPC     &kp A      &kp R &kp S     &kp T           &kp D          &kp H          &kp N          &kp E  &kp I  &kp O           &kp DEL
+&kp LALT     &mt LCTL Z &kp X &kp C     &kp V           &kp B          &kp K          &kp M          &td_lb &td_rb &ht MINUS GRAVE &ht DQT SQT
+                              &mo L_NUM &mt RSHFT SPACE &mt RGUI RET   &mt RCTL COMMA &mt RALT DOT   &mo L_CODE
             >;
         };
 
@@ -85,37 +85,37 @@
 &kp ESC        &kp LG(N)    &kp LA(UP) &kp LA(LEFT) &kp LA(RIGHT) &kp UP       &mt RALT RGUI &none  &none &kp PG_DN &kp LA(LG(EQUAL)) &none
 &trans         &kp LC(UP)   &none      &none        &none         &kp DOWN     &none         &none  &none &none     &kp RET           &none
 &kp LG(LS(N3)) &kp LC(DOWN) &kp F11    &none        &kp LEFT      &kp RIGHT    &kp LG(MINUS) &none  &none &kp PG_UP &kp LA(LG(MINUS)) &none
-                                       &trans       &trans        &to L_MAIN   &to L_KEYB    &trans &trans
+                                       &to L_MAIN   &trans        &trans       &trans        &trans &to L_KEYB
             >;
         };
 
         code_layer {
             label = "Code";
             bindings = <
-&trans &kp HASH  &kp AT    &kp DLLR &kp LPAR &kp ESC         &kp PLUS           &kp RPAR &kp AMPS &kp LA(LEFT) &kp LA(RIGHT) &kp EXCL
-&trans &kp DQT   &kp SQT   &kp PIPE &kp LBRC &kp COLON       &kp EQUAL          &kp RBRC &kp SEMI &kp SLASH    &kp GRAVE     &ht DEL PRCNT
-&trans &kp TILDE &kp CARET &kp LBKT &kp LT   &kp UNDER       &to_kp L_NUM MINUS &kp GT   &kp RBKT &kp STAR     &kp BSLH      &kp QMARK
-                           &trans   &trans   &to L_CURSOR    &trans             &trans   &trans
+&trans &kp HASH  &kp AT    &kp DLLR     &kp LPAR &kp ESC     &kp PLUS           &kp RPAR &kp AMPS &kp LA(LEFT) &kp LA(RIGHT) &kp EXCL
+&trans &kp DQT   &kp SQT   &kp PIPE     &kp LBRC &kp COLON   &kp EQUAL          &kp RBRC &kp SEMI &kp SLASH    &kp GRAVE     &ht DEL PRCNT
+&trans &kp TILDE &kp CARET &kp LBKT     &kp LT   &kp UNDER   &to_kp L_NUM MINUS &kp GT   &kp RBKT &kp STAR     &kp BSLH      &kp QMARK
+                           &to L_CURSOR &trans   &trans      &trans             &trans   &trans
             >;
         };
 
         numbers_layer {
             label = "Numbers";
             bindings = <
-&trans &kp F10           &kp F11 &kp F12         &kp P         &kp RPAR    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp MINUS &kp DLLR  &kp PRCNT 
-&trans &kp F7            &kp F8  &kp F9          &kp LT        &kp GT      &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N0 &kp UP    &kp ENTER 
-&trans &kp LA(LC(SPACE)) &kp F14 &kp F15         &kp EXCL      &kp EQUAL   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp LEFT  &kp DOWN  &kp RIGHT
-                                 &ht SLASH MINUS &ht STAR PLUS &trans      &trans    &trans    &to L_CODE
+&trans &kp F10           &kp F11 &kp F12 &kp P           &kp RPAR        &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp MINUS &kp DLLR  &kp PRCNT 
+&trans &kp F7            &kp F8  &kp F9  &kp LT          &kp GT          &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N0 &kp UP    &kp ENTER 
+&trans &kp LA(LC(SPACE)) &kp F14 &kp F15 &kp EXCL        &kp EQUAL       &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp LEFT  &kp DOWN  &kp RIGHT
+                                 &trans  &ht SLASH MINUS &ht STAR PLUS   &trans    &trans    &to L_CODE
             >;
         };
 
         keyboard_layer {
             label = "Keyboard";
             bindings = <
-&none &none           &rgb_ug RGB_SAI &none  &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-&none &rgb_ug RGB_TOG &none           &none  &none           &none             &to L_MAIN       &to L_CURSOR      &to L_CODE   &to L_NUM    &none        &none
-&none &none           &rgb_ug RGB_SAD &none  &rgb_ug RGB_HUD &rgb_ug RGB_BRD   &ext_power EP_ON &ext_power EP_OFF &none        &none        &none        &none
-                                      &trans &trans          &to L_MAIN        &to L_CODE       &trans            &trans
+&none &none           &rgb_ug RGB_SAI &none      &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+&none &rgb_ug RGB_TOG &none           &none      &none           &none             &to L_MAIN       &to L_CURSOR      &to L_CODE   &to L_NUM    &none        &none
+&none &none           &rgb_ug RGB_SAD &none      &rgb_ug RGB_HUD &rgb_ug RGB_BRD   &ext_power EP_ON &ext_power EP_OFF &none        &none        &none        &none
+                                      &to L_MAIN &trans          &trans            &trans           &trans            &to L_CODE
             >;
         };
     };
